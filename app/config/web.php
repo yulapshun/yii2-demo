@@ -1,15 +1,10 @@
 <?php
-use yii\rest\UrlRule;
-
-$params = require(__DIR__ . '/params.php');
-
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
         'request' => [
-            'cookieValidationKey' => 'TOcqws48ZNXDPHkLiWfQsqNme9OUQiK-',
             'parsers' => [
                 'application/json' => 'yii\web\JsonParser',
             ]
@@ -19,10 +14,6 @@ $config = [
         ],
         'user' => [
             'identityClass' => 'app\models\User',
-            'enableAutoLogin' => true,
-        ],
-        'errorHandler' => [
-            'errorAction' => 'site/error',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -42,7 +33,6 @@ $config = [
             ],
         ],
     ],
-    'params' => $params,
 ];
 
 if (YII_ENV_DEV) {
