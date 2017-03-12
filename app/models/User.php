@@ -20,6 +20,7 @@ class User extends \yii\db\ActiveRecord
         return [
             [['username', 'password'], 'required'],
             [['username'], 'string', 'max' => 255],
+            [['status'], 'integer'],
             [['email'], 'email']
         ];
     }
