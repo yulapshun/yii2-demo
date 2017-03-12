@@ -15,5 +15,5 @@ services:
     links:
       - db
     volumes:
-      - ./app:/app
-    command: bash /app/start.sh
+      - ./app:/var/www/app
+    command: bash /var/www/app/start.sh
